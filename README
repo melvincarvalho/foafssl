@@ -1,0 +1,7 @@
+To use this code you have to edit your openssl.cnf file (look in
+/etc/pki/tls/openssl.cnf or /usr/share/ssl/openssl.cnf).
+
+the defaults section (the top bit, before and named sections) should have
+   SAN = "" san = $ENV::SAN
+and the usr_cert section should have
+   subjectAltName=$san
